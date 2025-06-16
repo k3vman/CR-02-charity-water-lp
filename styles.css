@@ -200,47 +200,86 @@ section {
 /* =========================
    Story Section
    ========================= */
+/* Match the background color scheme of the hero (first) section */
 .story {
-  background-color: var(--section-bg-story);
-  color: var(--text-color);
+  background-color: #222;
+  color: #fff;
   text-align: center;
   padding: 30px 20px;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  /* Add a subtle text shadow for better readability */
+  text-shadow: 0 2px 8px rgba(46, 157, 247, 0.18);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.story img {
-  margin-bottom: 20px;
-  margin-top: 8px;
+/* Add interactive hover effect for story section */
+.story:hover {
+  box-shadow: 0 8px 32px rgba(46, 157, 247, 0.18);
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* Make the Our Story heading bold and blue for accent, add text shadow */
+.story h2 {
+  color: #2E9DF7;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-shadow: 0 2px 10px rgba(46, 157, 247, 0.22);
+  letter-spacing: 1px;
+}
+
+/* Add a little more style to the subheadline */
+.story h3 {
+  color: #FFC907;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 6px rgba(46, 157, 247, 0.15);
+}
+
+.story p {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.08em;
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(46, 157, 247, 0.13);
 }
 
 /* =========================
    Impact Section
    ========================= */
+/* Match the background color scheme of the hero (first) section for impact */
 .impact-story {
-  background-color: var(--section-bg-impact);
-  color: var(--text-color);
+  background-color: #222; /* Same as hero-banner background */
+  color: #fff;            /* White text for contrast */
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  text-align: center;     /* Center align content like the story box */
+  padding: 30px 20px;
+  /* Add a subtle text shadow for better readability */
+  text-shadow: 0 2px 8px rgba(46, 157, 247, 0.18);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
 
-.impact-content {
-  /* Flex on large screens, stacked on mobile (see media queries) */
+/* Add interactive hover effect for impact section */
+.impact-story:hover {
+  box-shadow: 0 8px 32px rgba(46, 157, 247, 0.18);
+  transform: translateY(-4px) scale(1.01);
 }
 
-.impact-content img,
-.impact-image {
-  transition: box-shadow 0.3s, filter 0.3s;
+/* Make the Real Impact heading bold and blue for accent, add text shadow */
+.impact-story h2 {
+  color: #2E9DF7;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-shadow: 0 2px 10px rgba(46, 157, 247, 0.22);
+  letter-spacing: 1px;
 }
 
-.impact-content img:hover,
-.impact-image:hover {
-  box-shadow: 0 6px 24px rgba(46, 157, 247, 0.18);
-  filter: brightness(1.08);
-}
-
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+.impact-content p {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-size: 1.08em;
+  line-height: 1.6;
+  text-shadow: 0 1px 6px rgba(46, 157, 247, 0.13);
 }
 
 /* =========================
@@ -276,6 +315,27 @@ section {
   background: var(--accent-color);
   color: #fff;
   transform: scale(1.07);
+}
+
+/* =========================
+   Image Borders for Story & Impact
+   ========================= */
+/* This class adds a nice border and shadow to images */
+.bordered-img {
+  border: 4px solid var(--primary-color); /* Brand yellow border */
+  border-radius: 16px;                    /* Rounded corners */
+  box-shadow: 0 4px 18px rgba(46, 157, 247, 0.10); /* Soft blue shadow */
+  background: #fff;
+  /* Add a little space around the image */
+  padding: 4px;
+}
+
+/* Make the story and impact images larger and centered */
+.story-image.bordered-img,
+.impact-image.bordered-img {
+  width: 320px;
+  max-width: 95vw;
+  margin: 0 auto 18px auto;
 }
 
 /* =========================
@@ -323,9 +383,11 @@ section {
     text-align: center;
   }
   .impact-image,
-  .story img {
-    width: 95%;
-    max-width: 260px;
+  .story img,
+  .story-image.bordered-img,
+  .impact-image.bordered-img {
+    width: 98vw;
+    max-width: 380px;
     margin: 0 auto 14px auto;
     display: block;
   }
