@@ -41,6 +41,122 @@ section {
   padding: 24px 16px;
 }
 
+/* Header styles */
+.site-header {
+  display: flex;
+  align-items: center;
+  background: #222; /* Dark background */
+  padding: 12px 24px;
+}
+
+/* Logo image */
+.logo-img {
+  height: 44px; /* Set logo height */
+  width: 44px;
+  margin-right: 12px;
+}
+
+/* Charity name text */
+.charity-name {
+  color: #fff;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
+}
+
+/* Hero banner with angled yellow accent */
+.hero-banner {
+  position: relative;
+  background: #222; /* Black background */
+  color: #fff;
+  padding: 32px 12px 36px 12px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Hero content (headline, subheadline, button) */
+.hero-content {
+  position: relative;
+  z-index: 2; /* Make sure text is above the yellow accent */
+}
+
+/* Main headline */
+.hero-banner h1 {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+}
+
+/* Subheadline */
+.hero-subheadline {
+  font-size: 1.1em;
+  margin: 0 0 18px 0;
+  font-weight: 500;
+}
+
+/* Hero button */
+.hero-btn {
+  display: inline-block;
+  background: #FFC907; /* Yellow */
+  color: #222;
+  font-weight: bold;
+  padding: 12px 28px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-size: 1.1em;
+  margin-top: 8px;
+  transition: background 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background: #ffb800;
+}
+
+/* Yellow angled accent (triangle) */
+.yellow-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 100px solid #FFC907; /* Height and color of triangle */
+  border-left: 180px solid transparent; /* Width of triangle */
+  z-index: 1;
+}
+
+/* Yellow divider line */
+.yellow-divider {
+  height: 6px;
+  background: #FFC907;
+  width: 100%;
+  margin: 0;
+}
+
+/* Hero image section (lower half) */
+.hero-image-section {
+  width: 100%;
+  background: #000; /* fallback background */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  min-height: 340px;
+  max-height: 60vh;
+  padding: 0;
+}
+
+/* The main image (not stretched) */
+.hero-bg-img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover; /* Ensures image covers area without stretching */
+  display: block;
+}
+
 /* Hero Section Styles */
 .hero {
   position: relative; /* Needed for overlay */
@@ -176,6 +292,21 @@ section {
   .impact-image {
     width: 90%;    /* Make image take up most of the width */
     max-width: 220px;
+  }
+
+  .hero-banner h1 {
+    font-size: 1.3em;
+  }
+  .yellow-accent {
+    border-top: 60px solid #FFC907;
+    border-left: 90px solid transparent;
+  }
+  .hero-image-section {
+    min-height: 180px;
+    max-height: 30vh;
+  }
+  .hero-bg-img {
+    max-height: 30vh;
   }
 }
 
